@@ -29,6 +29,86 @@
             <TextBlock Text="Description" />
             <TextBox Padding="2"/>
 
+            <!--Status and Revision-->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <!--Status-->
+                <StackPanel Grid.Column="0" Margin="0 0 10 0">
+                    <TextBlock Text="Status" />
+                    <TextBox IsReadOnly="True" Background="#eee" Padding="2"/>
+                </StackPanel>
+                <!--Revision-->
+                <StackPanel Grid.Column="1">
+                    <TextBlock Text="Revision" />
+                    <TextBox IsReadOnly="True" Background="#eee" Padding="2"/>
+                </StackPanel>
+            </Grid>
+            
+            <!--Part Number-->
+            <TextBlock Text="Part Number" />
+            <TextBox IsReadOnly="True" Background="#eee" Padding="2"/>
+
+            <!--Label-->
+            <TextBlock Text="Raw Material" FontWeight="Bold" Margin="0 10"/>
+
+            <!--Material Dropdown List-->
+            <TextBlock Text="Material" />
+            <ComboBox Padding="2"/>
+
+            <!--Label-->
+            <TextBlock Text="Manufacturing Information" FontWeight="Bold" Margin="0 10"/>
+
+            <!--Check boxes-->
+            <TextBlock Text="Work Centers" />
+            <!--Setup the Grid Columns-->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <!--Left Side-->
+                <StackPanel Grid.Column="0" Margin="0 0 10 0">
+                    <CheckBox Content="Weld"/>
+                    <CheckBox Content="Assembly"/>
+                    <CheckBox Content="Plasma"/>
+                    <CheckBox Content="Laser"/>
+                    <CheckBox Content="Purchase"/>
+                </StackPanel>
+                <!--Right Side-->
+                <StackPanel Grid.Column="1" Margin="0 0 10 0">
+                    <CheckBox Content="Lathe"/>
+                    <CheckBox Content="Drill"/>
+                    <CheckBox Content="Fold"/>
+                    <CheckBox Content="Roll"/>
+                    <CheckBox Content="Saw"/>
+                </StackPanel>
+            </Grid>
+
+            <!--Length-->
+            <TextBlock Text="Length" />
+            <TextBox Padding="2"/>
+
+            <!--Mass-->
+            <TextBlock Text="Mass" />
+            <TextBox IsReadOnly="True" Background="#eee" Padding="2"/>
+            
+            <!--Finish-->
+            <TextBlock Text="Finish" />
+            <ComboBox SelectedIndex="0" Padding="2">
+                <ComboBoxItem>Painted</ComboBoxItem>
+                <ComboBoxItem>Not Painted</ComboBoxItem>
+            </ComboBox>
+
+            <!--Purchase Information-->
+            <TextBlock Text="Purchase Information" />
+            <ComboBox SelectedIndex="0" Padding="2">
+                <ComboBoxItem>Rubber</ComboBoxItem>
+                <ComboBoxItem>Not Rubber</ComboBoxItem>
+            </ComboBox>
+
         </StackPanel>
     </Border>
 </Window>
